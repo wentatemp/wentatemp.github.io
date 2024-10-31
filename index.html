@@ -187,6 +187,19 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buyButtons = document.querySelectorAll(".buy-btn");
+
+    buyButtons.forEach(button => {
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+        alert("Aviso: No se aceptan devoluciones por servicios adquiridos. Al continuar, aceptas nuestros términos y condiciones declarados en el canal 'terminos-y-condiciones' en nuestro discord.");
+        window.location.href = this.href;
+      });
+    });
+  });
+</script>
 
 </body>
 
